@@ -8,9 +8,28 @@
   </head>
   <body>
     <div class="game-panel">
+      <div class="mode-switcher" aria-label="Game modes">
+        <button class="mode-button active" data-mode="single" type="button">Single Player</button>
+        <button class="mode-button" data-mode="duel" type="button">2-Player Test</button>
+        <button class="mode-button" data-mode="iq" type="button">IQ Test</button>
+        <button class="mode-button" data-mode="grammar" type="button">Grammar</button>
+        <button class="mode-button" data-mode="vocabulary" type="button">Vocabulary</button>
+        <button class="mode-button" data-mode="russian" type="button">Russian</button>
+      </div>
+
       <div class="hud">
         <span>Score: <strong id="score">0</strong></span>
         <span>Health: <strong id="health">100</strong></span>
+      </div>
+
+      <div class="quiz-panel hidden" id="quizPanel">
+        <div class="quiz-header">
+          <span id="quizModeName">IQ Test</span>
+          <span id="quizCounter">1 / 5</span>
+        </div>
+        <h2 id="quizQuestion">Question</h2>
+        <div id="quizOptions" class="quiz-options"></div>
+        <button id="quizNextBtn" type="button" class="quiz-next-btn">Next</button>
       </div>
 
       <canvas id="gameCanvas" width="960" height="540"></canvas>
